@@ -28,3 +28,15 @@ class NumArray:
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(left,right)
+
+# Unit Test
+import unittest
+class TestNumArray(unittest.TestCase):
+    def testNumArray1(self):
+        numArray = NumArray([-2, 0, 3, -5, 2, -1])
+        self.assertAlmostEqual(numArray.sumRange(0, 2), 1)
+        self.assertAlmostEqual(numArray.sumRange(2, 5), -1)
+        self.assertAlmostEqual(numArray.sumRange(0, 5), -3)
+
+if __name__ == '__main__':
+    unittest.main()
